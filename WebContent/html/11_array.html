@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			// 값의 목록으로 배열 생성
+			var arr1 = [95, 80, 92];
+			var arr2 = ["java", "C", "Python"];
+			
+			console.log(arr1);
+			console.log(arr2);
+			
+			console.log(arr1[0]);
+			console.log(arr2[1]);
+			
+			console.log(arr1.length);
+			
+			//빈 배열을 생성
+			var arr3 = [];
+			var arr4 = new Array();
+			
+			console.log(arr3);
+			
+			//항목 추가
+			arr3.push(123);
+			arr3.push(132);
+			arr3.push(213);
+			arr3.push(231);
+			
+			console.log(arr3);
+			
+			//항목 제거
+			var fruits = ["Banana", "Orange", "Apple", "Mango"];
+			//(시작 인덱스, 몇개를 지우면서 추가할건지, 추가할 것들..) -> 뒤에 추가할것을 넣지 않고 지울 개수를 입력하면 삭제만함
+			fruits.splice(1, 3, "Lemon", "Kiwi");
+			console.log(fruits);
+			
+			var arr5 = [3, 5, 2, 4, 1, 6];
+			arr5.sort();		//오름차순
+			console.log(arr5);
+			arr5.reverse();		//내림차순
+			console.log(arr5);
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			//fun1();	가능은 하지만 안하는게 좋다.
+			
+			function fun1() {
+				console.log("Hello JavaScript");
+			}
+			
+			function fun2() {
+				var x = 10;
+				var y = 20;
+				var result = x+y;
+				console.log("result: "+result);
+			}
+			
+			function fun3() {
+				return true;
+			}
+			
+			function fun4() {
+				console.log("마우스가 그림 안에 있습니다.");
+			}
+			function fun5() {
+				console.log("마우스가 그림 밖에 있습니다.");
+			}
+		</script>
+	</head>
+	<body>
+		<h4>08_event_handling.html</h4>
+		<button onclick='fun1()'>fun1() 호출</button> <br/>
+		<button onclick='fun2()'>fun2() 호출</button> <br/>
+		<a href="javascript:fun1()">
+			<img src="../common/img/bono.jpg"/>
+		</a> <br/>
+		
+		<a href="https://www.apache.org/">
+			<img src="../common/img/bono.jpg">
+		</a>
+		
+		<a href="https://www.apache.org/" onclick="return fun3()">네이버</a> <br/>
+		
+		<form action="https://www.apache.org/" onsubmit="return fun3()">
+			<input type="submit" value="이동"/>
+		</form>
+		
+		<br/>
+		
+		<img src="../common/img/bono.jpg" width="300"
+			onmouseenter="fun4()" onmouseleave="fun5()"/>
+	</body>
+</html>
