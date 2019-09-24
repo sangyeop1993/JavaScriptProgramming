@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			var var1 = 10;
+			
+			function fun1() {
+				var var2 = 20;
+				
+				if(true) {
+					var var3 = 30;
+					console.log("var1: "+var1);
+					console.log("var2: "+var2);
+					console.log("var3: "+var3);
+				}
+				
+				console.log("var1: "+var1);
+				console.log("var2: "+var2);
+				console.log("var3: "+var3); // 사용가능
+				
+			}
+			
+			fun1();
+			
+			console.log("var1: "+var1);
+			//console.log("var2: "+var2);	-> 이건 안됨
+			//console.log("var3: "+var3);	-> 이것도 안됨
+			
+			//함수 내에서 선언하면 그 함수 내에서 사용 가능. if문은 상관이 없다.
+		</script>
+	</head>
+	<body>
+		<h4>06_variable_scope.html</h4>
+	</body>
+</html>
