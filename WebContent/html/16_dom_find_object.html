@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			function fun1() {
+				var image1 = document.querySelector("#img1");
+				img1.src = "../common/img/bono.jpg";
+			}
+			
+			function fun2() {
+				var imgLists = document.querySelectorAll(".img2");
+				for(var i=0; i<imgLists.length;i+=1) imgLists[i].src = "../common/img/bono.jpg";
+			}
+			
+			function fun3() {
+				var imgLists2 = document.querySelectorAll("img");
+				for(var i=0; i<imgLists2.length;i+=1) imgLists2[i].src = "../common/img/Tulips.jpg"
+			}
+			
+			function fun4() {
+				var imgLists3 = document.querySelectorAll("#div1 img");
+				for(var i=0; i<imgLists3.length;i+=1) imgLists3[i].src = "../common/img/bono.jpg"
+			}
+			
+			function fun5() {
+				var input_m_id = document.querySelector("#joinForm [name=m_id]");
+				console.log(input_m_id.value);
+				
+				var input_m_password = document.querySelector("#joinForm [name=m_password]");
+				var password = input_m_password.value;
+				if(password=="") window.alert("패스워드 안 넣을래??");
+				else if(password.length<8) window.alert("패스워드 똑바로 안 넣을래?");
+				else console.log(input_m_password.value);
+				
+				var inputHobby = document.querySelectorAll("#joinForm [name=hobby]");
+				var inputHobbyChecked = document.querySelectorAll("#joinForm [name=hobby]:checked");
+				for(var i=0;i<inputHobbyChecked.length;i+=1) console.log(inputHobbyChecked[i].value);
+			}
+			
+			function fun6() {
+				var form = document.joinForm;
+				var mid = document.joinForm.m_id.value;
+				var password = document.joinForm.m_password.value;
+				console.log("ID: "+mid);
+				console.log("Password: "+password);
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="fun1()">아이디로 찾기</button>
+		<button onclick="fun2()">클래스로 찾기</button>
+		<button onclick="fun3()">태그명으로 찾기</button>
+		<button onclick="fun4()">#div1 img 이용한 찾기</button>
+		<button onclick="fun5()">form 양식 찾기1</button>
+		<button onclick="fun6()">form 양식 찾기2</button>
+		
+		<hr/>
+		
+		<img id="img1" src="../common/img/Koala.jpg" width="200"/> <br/>
+		
+		<img class="img2" src="../common/img/Chrysanthemum.jpg" width="200"/>
+		<img class="img2" src="../common/img/Penguins.jpg" width="200"/>
+		<br/>
+		
+		<div id="div1">
+			<img src="../common/img/Chrysanthemum.jpg" width="200"/>
+			<img src="../common/img/Penguins.jpg" width="200"/>
+		</div>
+		
+		<form id="joinForm" name="joinForm">
+			아이디: <input name="m_id" type="text"/> <br/>
+			비번: <input name="m_password" type="password"/> <br/>
+			취미:
+				<input name="hobby" type="checkbox" value="movie"/>영화
+				<input name="hobby" type="checkbox" value="coding"/>코딩
+				<input name="hobby" type="checkbox" value="trip"/>여행<br/> 
+		</form>
+	</body>
+</html>

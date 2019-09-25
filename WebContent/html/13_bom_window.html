@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			function fun1(){
+				var w = innerWidth;	//원래 window.innerWidth 인데 window는 생략 가능
+				var h = innerHeight;
+				console.log("width: "+w);
+				console.log("height: "+h);
+			}
+			
+			function fun2() {
+				window.alert("메시지입니다.");
+			}
+			
+			function fun3() {
+				var result = window.confirm("The cake is a lie!");
+				if(result) console.log("You Survive.");
+				else console.log("You Died.");
+			}
+			
+			function fun4() {
+				var input = window.prompt("수량을 입력하세요.");
+				if(input != null) console.log("입력된 수량: "+input);
+				else console.log("취소하셨습니다.");
+			}
+			
+			function fun5() {
+				window.open("08_event_handling.html","_blank","width=1200, height=700");
+			}
+			
+			function fun6() {
+				timerId = setInterval(function() {console.log("Hello World!");}, 1000);
+			}
+			
+			function fun7() {
+				clearInterval(timerId);
+			}
+			
+			function fun8() {
+				timerId2 = setTimeout(function() {alert("일어나!");}, 4000);
+			}
+			
+			function fun9() {
+				clearTimeout(timerId2);
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="fun1()">ViewPort Size</button> <br/>
+		<button onclick="fun2()">Message Alert</button> <br/>
+		<button onclick="fun3()">Confirm Alert</button> <br/>
+		<button onclick="fun4()">입력 메시지</button> <br/>
+		<button onclick="fun5()">이동</button><br/>
+		<button onclick="fun6()">시작</button>
+		<button onclick="fun7()">취소</button><br/>
+		<button onclick="fun8()">시작</button>
+		<button onclick="fun9()">취소</button><br/>
+	</body>
+</html>

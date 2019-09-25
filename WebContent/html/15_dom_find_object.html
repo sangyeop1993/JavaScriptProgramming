@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			function fun1() {
+				var image1 = document.getElementById("img1");
+				img1.src = "../common/img/bono.jpg";
+			}
+			
+			function fun2() {
+				var imgLists = document.getElementsByClassName("img2");
+				for(var i=0; i<imgLists.length;i+=1) imgLists[i].src = "../common/img/bono.jpg";
+			}
+			
+			function fun3() {
+				var imgLists2 = document.getElementsByTagName("img");
+				for(var i=0; i<imgLists2.length;i+=1) imgLists2[i].src = "../common/img/Tulips.jpg"
+			}
+			
+
+		</script>
+	</head>
+	<body>
+		<button onclick="fun1()">아이디로 찾기</button>
+		<button onclick="fun2()">클래스로 찾기</button>
+		<button onclick="fun3()">태그명으로 찾기</button>
+		
+		<hr/>
+		
+		<img id="img1" src="../common/img/Koala.jpg" width="200"/> <br/>
+		
+		<img class="img2" src="../common/img/Chrysanthemum.jpg" width="200"/>
+		<img class="img2" src="../common/img/Penguins.jpg" width="200"/>
+
+	</body>
+</html>
