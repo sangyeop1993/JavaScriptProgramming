@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="../common/js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			function fun1() {
+				var image1 = $("#img1");
+				image1.attr("src", "../common/img/bono.jpg");
+			}
+			
+			function fun2() {
+				var image2 = $(".img2");
+				image2.attr("src", "../common/img/bono.jpg");
+			}
+			
+			function fun3() {
+				$("img").attr("src", "../common/img/Penguins.jpg");
+			}
+			
+			function fun4() {
+				$("#div1 img").attr("src", "../common/img/bono.jpg");
+			}
+			
+			function fun5() {
+				var inputmid = $("#joinForm [name=m_id]");
+				console.log(inputmid.val());
+				
+				var inputpass = $("#joinForm [name=m_password]");
+				var password = inputpass.val();
+				
+				if(password=="") window.alert("패스워드 안 넣을래?");
+				else if(password.length<8) window.alert("패스워드 똑바로 안 넣을래?");
+				else console.log(password);
+				
+				var inputHobbyChecked = $("#joinForm [name=hobby]:checked");
+				for(var i=0;i<inputHobbyChecked.length;i+=1) {
+					console.log(inputHobbyChecked[i].value);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="fun1()">아이디로 찾기</button>
+		<button onclick="fun2()">클래스로 찾기</button>
+		<button onclick="fun3()">태그명으로 찾기</button>
+		<button onclick="fun4()">#div1 img 이용한 찾기</button>
+		<button onclick="fun5()">form 양식 찾기</button>
+		
+		<hr/>
+		
+		<img id="img1" src="../common/img/Koala.jpg" width="200"/> <br/>
+		
+		<img class="img2" src="../common/img/Chrysanthemum.jpg" width="200"/>
+		<img class="img2" src="../common/img/Penguins.jpg" width="200"/>
+		<br/>
+		
+		<div id="div1">
+			<img src="../common/img/Chrysanthemum.jpg" width="200"/>
+			<img src="../common/img/Penguins.jpg" width="200"/>
+		</div>
+		
+		<form id="joinForm" name="joinForm">
+			아이디: <input name="m_id" type="text"/> <br/>
+			비번: <input name="m_password" type="password"/> <br/>
+			취미:
+				<input name="hobby" type="checkbox" value="movie"/>영화
+				<input name="hobby" type="checkbox" value="coding"/>코딩
+				<input name="hobby" type="checkbox" value="trip"/>여행<br/> 
+		</form>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>calculator</title>
+	<link rel="stylesheet" href="css/calculator.css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="../common/js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="Calculator.js"></script>
+</head>
+<body>
+    <div id="calculator">
+        <div class="screen"></div>
+        <div class="F F2">
+            <button class="open blue">(</button>
+            <button class="close blue">)</button>
+            <button class="remainder blue">%</button>
+            <button class="del blue" onclick="del()">del</button>
+        </div>
+        <div class="F F3">
+            <button class="N7 blue" onclick="n(7)">7</button>
+            <button class="N8 blue" onclick="n(8)">8</button>
+            <button class="N9 blue" onclick="n(9)">9</button>
+            <button class="divid blue" onclick="devide()">÷</button>
+        </div>
+        <div class="F F4">
+            <button class="N4 blue" onclick="n(4)">4</button>
+            <button class="N5 blue" onclick="n(5)">5</button>
+            <button class="N6 blue" onclick="n(6)">6</button>
+            <button class="X blue" onclick="multi()">×</button>
+        </div>
+        <div class="F F5">
+            <button class="N1 blue" onclick="n(1)">1</button>
+            <button class="N2 blue" onclick="n(2)">2</button>
+            <button class="N3 blue" onclick="n(3)">3</button>
+            <button class="minus blue" onclick="minus()">-</button>
+        </div>
+        <div class="F F6">
+            <button class="N0 blue" onclick="n(0)">0</button>
+            <button class="dot blue">.</button>
+            <button class="result red" onclick="result()">=</button>
+            <button class="plus blue" onclick="plus()">+</button>
+        </div>
+        
+    </div>
+</body>
+</html>

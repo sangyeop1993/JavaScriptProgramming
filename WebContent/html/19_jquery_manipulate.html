@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="../common/js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			function fun1(){
+				$("#div1").append("<img src='../common/img/bono.jpg'>");
+			}
+			
+			function fun2(){
+				$("#div2").attr("style", "width: 200px; height: 200px; background-color: black");
+				
+				/* var div2 = $("#div2");
+				div2.css("width", "200px");
+				div2.css("height", "200px");
+				div2.css("background-color", "black");
+				*/
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="fun1()">내용 채우기</button>
+		<button onclick="fun2()">style 바꾸기</button>
+		<hr/>
+		<div id="div1"></div>
+		<div id="div2"></div>
+	</body>
+</html>
